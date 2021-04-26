@@ -1,0 +1,13 @@
+.logout-button {
+  width: 40px;
+  height: 40px;
+  opacity: .5;
+  transition: all .3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  &:hover {
+    opacity: 1;
+  }
+}

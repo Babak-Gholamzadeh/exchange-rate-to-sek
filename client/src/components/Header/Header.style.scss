@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  background-color: #222;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  box-shadow: 0 0 10px 5px rgba(#333, .3);
+  .site-name {
+    color: #ddd;
+    font-weight: 300;
+  }
+  .logout {
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}
