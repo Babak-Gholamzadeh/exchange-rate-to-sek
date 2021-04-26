@@ -1,0 +1,88 @@
+.main-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 30px;
+  .no-item {
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 18px;
+    opacity: 0.7;
+  }
+  .main-header {
+    color: #666;
+    font-weight: 200;
+  }
+  .main-item {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid lightgray;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:last-child {
+      border-bottom: none;
+    }
+    .item-flag {
+      min-width: 30px;
+    }
+    .item-action {
+      min-width: 60px;
+    }
+    .item-population {
+      min-width: 100px;
+    }
+    .item-name,
+    .item-currencies {
+      flex: 1;
+    }
+    .item-currencies {
+      overflow-x: auto;
+      .currency-box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 3px;
+        border: 1px solid #333;
+        height: 40px;
+        span {
+          padding: 0 5px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        .currency-code {
+          color: #fff;
+          background-color: #333;
+        }
+      }
+    }
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+    img {
+      border-radius: 5px;
+      width: 30px;
+      height: 20px;
+      object-fit: cover;
+    }
+    button {
+      height: 30px;
+      width: 30px;
+      opacity: 0.3;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 1;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
