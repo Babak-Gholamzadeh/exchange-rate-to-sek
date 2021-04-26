@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import GraphQLClient, { GraphQLProvider } from './lib/graphql-client';
 import WebStorage from './lib/web-storage';
+import AuthProvider from './components/AuthProvider/AuthProvider.component';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
@@ -16,10 +17,11 @@ const client = GraphQLClient({
 
 ReactDom.render(
   <GraphQLProvider client={client}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthProvider>
   </GraphQLProvider>,
   document.getElementById('root'),
 );
-
