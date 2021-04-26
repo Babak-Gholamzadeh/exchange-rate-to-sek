@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const graphQLServer = require('./graphql');
 
 const app = express();
 
@@ -11,5 +12,7 @@ app.use(rateLimit({
   windowMs: 60 * 1000,
   max: 30,
 }));
+
+graphQLServer(app);
 
 module.exports = app;
