@@ -1,0 +1,29 @@
+.form-wrapper {
+  min-width: 250px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px 10px rgba(#000, .1);
+  padding: 30px 50px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  .form-title {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    opacity: .5;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    .text-input-wrapper {
+      margin-bottom: 20px;
+    }
+    .button-input-wrapper {
+      margin-top: 20px;
+    }
+  }
+}

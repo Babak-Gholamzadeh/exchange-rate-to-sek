@@ -1,0 +1,41 @@
+.spinning {
+  position: relative;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  border-color: var(--spin-color) transparent var(--spin-color) var(--spin-color);
+  border-style: solid;
+  border-radius: 50%;
+  animation: spin-outline 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-width: 1px;
+    border-color: var(--spin-color) transparent var(--spin-color) var(--spin-color);
+    border-style: solid;
+    border-radius: 50%;
+    animation: spin-inline 1s linear infinite;
+  }
+}
+
+@keyframes spin-outline {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-inline {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

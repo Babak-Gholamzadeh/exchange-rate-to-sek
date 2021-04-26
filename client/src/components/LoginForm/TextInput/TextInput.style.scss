@@ -1,0 +1,24 @@
+.text-input-wrapper {
+  height: 40px;
+  position: relative;
+  .input-icon {
+    opacity: 30%;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  input {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding: 3px 10px 0 40px;
+    border-bottom: 1px solid #999;
+    transition: all .3s ease;
+    color: #333;
+    &:focus, &:hover {
+      border-bottom: 1px solid #666;
+      color: #000;
+    }
+  }
+}
